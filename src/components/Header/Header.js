@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SearchInput from '../SearchInput/SearchInput';
+import { SearchInput } from '../';
 
 import colors from '../../styles/colors';
 
-const Header = () => {
+const Header = ({ setQuery }) => {
   return (
     <HeaderStyled>
       <Brand>AmazingPosts🎉</Brand>
-      <SearchInput />
+      <SearchInput query={(value) => setQuery(value)} />
     </HeaderStyled>
   );
 };

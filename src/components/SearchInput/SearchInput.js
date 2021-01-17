@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import colors from '../../styles/colors';
 
-const SearchInput = () => {
+const SearchInput = ({ query }) => {
+  const [text, setText] = useState('');
+
+  const onChange = (value) => {
+    setText(value);
+    query(value);
+  };
+
   return (
     <>
-      <Input type="search" placeholder="Поиск статьи" />
+      <Input
+        type="search"
+        placeholder="Поиск статьи"
+        onChange={(event) => onChange(event.target.value)}
+      />
     </>
   );
 };

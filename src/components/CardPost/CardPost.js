@@ -9,8 +9,8 @@ const CardPost = ({ title, text, name, username }) => {
       <CardTitle>{title}</CardTitle>
       <CardText>{text}</CardText>
       <CardAuthor>
-        <span>{name}</span>
         <span>{username}</span>
+        <span>{name}</span>
       </CardAuthor>
     </Card>
   );
@@ -45,6 +45,9 @@ const CardText = styled.p`
 const CardAuthor = styled.div`
   display: flex;
   flex-direction: column;
+  color: ${colors.grey2};
+  font-size: 16px;
+  font-weight: 600;
 `;
 
 export default CardPost;

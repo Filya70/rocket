@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Loader from '../Loader/Loader';
-import CardPost from '../CardPost/CardPost';
+import { Loader, CardPost } from '../';
 
 const CardList = ({ posts, loading, users }) => {
   return loading ? (

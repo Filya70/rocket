@@ -22,6 +22,10 @@ const HeaderStyled = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0px 30px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
 `;
 
 const Brand = styled.h1`
